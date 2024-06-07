@@ -10,7 +10,7 @@ public class CheckGuest {
 		String partyGuests[];
 		
 		//Guests array population
-		partyGuests = new String[] {" Dua Lipa","Paris Hilton","Manuel Agnelli","J-Ax","Francesco Totti","Ilary Blasi","Bebe Vio","Luis","Pardis Zarei","Martina Maccherone","Rachel Zeilic"};
+		partyGuests = new String[] {"Dua Lipa","Paris Hilton","Manuel Agnelli","J-Ax","Francesco Totti","Ilary Blasi","Bebe Vio","Luis","Pardis Zarei","Martina Maccherone","Rachel Zeilic"};
 		
 		//Create an instance of the Scanner class and ask the user his name
 		Scanner scanner = new Scanner(System.in);
@@ -19,6 +19,35 @@ public class CheckGuest {
 		//Initialize a variable and assign to it the user input
 		String userName = scanner.nextLine();
 		
-	
+		//Initialize a boolean variable to control if the guest is found
+		boolean guestFound = false;
+		
+		//WHILE CYCLE SOLUTION
+		
+		//Initialize the cycle index
+		 int i = 0;
+		 
+		 
+		 while(i<partyGuests.length && !guestFound) {
+			 
+			 if(userName.equalsIgnoreCase(partyGuests[i])) {
+				 guestFound = true;
+			 }
+			 
+			 i++;
+		 }
+		
+		
+		 
+		 
+		 //Display the result to the user
+		 
+		 if(guestFound) {
+			 System.out.println("Il tuo nome è nella lista degli invitati, goditi il party!");
+		 }else {
+			 System.out.println("Mi dispiace " + userName + " il tuo nome non è nella lista degli invitati.");
+		 }
+		 
+		
 	}
 }
