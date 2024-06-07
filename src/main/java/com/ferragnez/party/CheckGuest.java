@@ -18,6 +18,8 @@ public class CheckGuest {
 		
 		//Initialize a variable and assign to it the user input
 		String userName = scanner.nextLine();
+		//Remove possible space at the beginning and the end of the string
+		userName = userName.trim();
 		
 		//Initialize a boolean variable to control if the guest is found
 		boolean guestFound = false;
