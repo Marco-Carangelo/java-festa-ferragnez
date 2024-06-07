@@ -37,7 +37,16 @@ public class CheckGuest {
 			 i++;
 		 }
 		
-		
+		//FOR CYCLE SOLUTION
+			
+			/*for( int i=0 ; i<partyGuests.length; i++) {
+				
+				if(userName.equalsIgnoreCase(partyGuests[i])) {
+					 guestFound = true;
+					 break;
+				 }
+				 
+			}*/
 		 
 		 
 		 //Display the result to the user
